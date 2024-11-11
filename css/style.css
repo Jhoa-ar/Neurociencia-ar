@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://amautas.com/wp-content/uploads/2023/06/C021_NEUROCIENCIA-min.jpg');
+    background-size: cover; /* Asegúrate de que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen de fondo */
+}
+
+.libre-baskerville- {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 150px;
+    text-align: justify;
+    transition: background-color 0.3s;
+    backdrop-filter: blur(10px);
+}
+
+.responsive-img {
+    max-width: 40%;  /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto;      /* Mantiene la relación de aspecto */
+    display: flex;    /* Hace que la imagen se comporte como un bloque */
+    margin: 10px 0; 
+    text-align: center;
+}
+nav {
+    position: relative;
+}
+
+nav .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+nav .menu-toggle .bar {
+    height: 4px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+}
+.subscribe-button {
+    background-color: #070D1B; /* Color de fondo del botón */
+    color: white;              /* Color del texto */
+    border: none;              /* Sin borde */
+    border-radius: 5px;       /* Bordes redondeados */
+    padding: 10px 20px;       /* Espaciado interno */
+    font-size: 16px;          /* Tamaño de fuente */
+    cursor: pointer;           /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+}
+
+.subscribe-button:hover {
+    background-color: #070D1B; /* Color de fondo al pasar el ratón */
+    transform: scale(1.05);     /* Aumenta ligeramente el tamaño */
+}
+
+.subscribe-button:active {
+    transform: scale(0.95);     /* Reduce el tamaño al hacer clic */
+}
+
+.subscribe-button:focus {
+    outline: none;              /* Elimina el contorno por defecto al hacer clic */
+    box-shadow: 0 0 5px #070D1B; /* Añade sombra al enfocar */
+}
+
+.faculty-glyphic-regular {
+    font-family: "Faculty Glyphic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--extra-light);
+    height: max-content;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+.faculty-glyphic-regular form {
+    background-color: #6A65B8; /* Fondo blanco para el formulario */
+    padding: 5px;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para el efecto de profundidad */
+    width: auto; /* Ancho del formulario */
+}
+
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-list a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin: 20px 0;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    backdrop-filter: blur(10px);
+}
+
+.video-container {
+    display: flex;
+    justify-content: center; /* Centra el iframe */
+    margin: 20px 0;         /* Añade margen para separar del texto */
+}
+
+iframe {
+    width: 560px; 
+    height: 315px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    nav .menu-toggle {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #4CAF50;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
+/* Mostrar el menú en pantalla pequeña */
+.menu-toggle.active + .nav-list {
+    display: flex;
+}
